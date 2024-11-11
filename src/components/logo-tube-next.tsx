@@ -4,7 +4,9 @@ import { slackey } from '@/app/layout';
 
 export default function LogoTubeNext() {
   return (
-    <div className={`${slackey.className} flex text-2xl`}>
+    <div
+      className={`${slackey.className} my-auto flex h-fit select-none text-2xl`}
+    >
       <span>T</span>
       <div className="relative flex text-primary">
         <Tv strokeWidth={4} className="h-7 w-7" />

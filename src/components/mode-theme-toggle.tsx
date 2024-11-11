@@ -15,7 +15,7 @@ export function ModeToggle() {
 
   return (
     <Button
-      className="rounded-full"
+      className="rounded-full p-2.5 transition-none"
       variant={'outline'}
       onClick={handleChangeTheme}
     >

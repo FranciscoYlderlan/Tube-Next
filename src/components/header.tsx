@@ -15,7 +15,7 @@ export default function Header() {
       <div className="flex items-center">
         <div className="ml-6 flex items-center gap-6 border-l border-muted-foreground/10 pl-6">
           <ModeToggle />
-          <Button type="button" size={'lg'} className="rounded font-semibold">
+          <Button type="button" size={'lg'} className="rounded font-bold">
             Login
           </Button>
         </div>
