@@ -2,7 +2,7 @@ import { Tv } from 'lucide-react';
 
 import { slackey } from '@/app/layout';
 
-export default function LogoTubeNext() {
+export function LogoTubeNext() {
   return (
     <div
       className={`${slackey.className} my-auto flex h-fit select-none text-2xl`}

@@ -1,24 +1,30 @@
 import { Search } from 'lucide-react';
 
-import LogoTubeNext from './logo-tube-next';
+import { LogoTubeNext } from './logo-tube-next';
 import { ModeToggle } from './mode-theme-toggle';
 import { Button } from './ui/button';
+import { Separator } from './ui/separator';
 
-export default function Header() {
+export function Header() {
   return (
-    <header className="itens-center fixed left-0 right-0 top-0 flex justify-between border-b border-muted px-8 py-3 backdrop-blur">
-      <LogoTubeNext />
-      <button className="flex w-full max-w-md items-center gap-3 whitespace-nowrap rounded-full border border-muted bg-foreground/5 px-3 py-1.5 text-xs text-muted-foreground">
+    <header className="sticky left-0 right-0 top-0 mb-6 flex items-center justify-between gap-6 border-b border-muted px-8 py-3 backdrop-blur">
+      <div className="flex gap-6">
+        <LogoTubeNext />
+        <Separator orientation="vertical" className="h-9" />
+      </div>
+      <Button
+        variant={'outline'}
+        className="w-fit max-w-md justify-start rounded-full bg-muted/30 p-2.5 text-muted-foreground transition-none sm:w-full"
+      >
         <Search size={14} />
-        <span>Find something ...</span>
-      </button>
-      <div className="flex items-center">
-        <div className="ml-6 flex items-center gap-6 border-l border-muted-foreground/10 pl-6">
-          <ModeToggle />
-          <Button type="button" size={'lg'} className="rounded font-bold">
-            Login
-          </Button>
-        </div>
+        <span className="hidden sm:flex">Find something ...</span>
+      </Button>
+      <div className="flex items-center gap-6">
+        <Separator orientation="vertical" className="h-9" />
+        <ModeToggle />
+        <Button type="button" size={'lg'} className="rounded font-bold">
+          Login
+        </Button>
       </div>
     </header>
   );
