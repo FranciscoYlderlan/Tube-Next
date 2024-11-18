@@ -1,14 +1,16 @@
 import { ChartLine, ThumbsUp } from 'lucide-react';
 import Image from 'next/image';
-import { title } from 'process';
 
 import thumbnailPlaceholder from '../../public/thumbnail-placeholder.svg';
+import { VideoCardDurationLabel } from './video-card-duration-label';
 
 export type videoCardProps = {
+  id: string;
   title: string;
   thumbnail?: string;
   views: number;
   likes?: number;
+  duration: number;
   orientation?: 'vertical' | 'horizontal';
 };
 
@@ -17,8 +19,9 @@ export function VideoCard({
   thumbnail = thumbnailPlaceholder,
   views,
   likes,
+  duration,
   orientation = 'vertical',
-}: videoCardProps) {
+}: Omit<videoCardProps, 'id'>) {
   const flexDirection = orientation === 'vertical' ? 'flex-col' : 'flex-row';
   const imageSize = orientation === 'vertical' ? 'w-full h-40' : 'w-5/12 h-24';
 
@@ -33,6 +36,7 @@ export function VideoCard({
           sizes="100%"
           className="rounded-lg object-cover"
         />
+        <VideoCardDurationLabel duration={duration} />
       </div>
       <div>
         <h3 className="text-lg font-semibold text-foreground">{title}</h3>
