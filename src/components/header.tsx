@@ -7,7 +7,7 @@ import { Separator } from './ui/separator';
 
 export function Header() {
   return (
-    <header className="sticky left-0 right-0 top-0 mb-6 flex items-center justify-between gap-6 border-b border-muted px-8 py-3 backdrop-blur">
+    <header className="sticky left-0 right-0 top-0 z-50 mb-6 flex items-center justify-between gap-6 border-b border-muted px-8 py-3 backdrop-blur">
       <div className="flex gap-6">
         <LogoTubeNext />
         <Separator orientation="vertical" className="h-9" />
