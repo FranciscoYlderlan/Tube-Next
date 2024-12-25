@@ -25,13 +25,15 @@ export function VideoCard({
   duration,
   orientation = 'vertical',
 }: Omit<videoCardProps, 'id'>) {
-  const flexDirection = orientation === 'vertical' ? 'flex-col' : 'flex-row';
-  const imageSize = orientation === 'vertical' ? 'w-full h-40' : 'w-5/12 h-24';
+  const flexDirection =
+    orientation === 'vertical' ? 'flex-col p-2' : 'flex-row py-1 pr-2';
+  const imageSize =
+    orientation === 'vertical' ? 'w-full h-40' : 'min-w-36 h-24';
 
   return (
     <Link
       href={`/${slug}/play`}
-      className={`flex ${flexDirection} gap-2 overflow-hidden rounded-md p-2 transition-colors duration-300 hover:bg-accent`}
+      className={`flex ${flexDirection} gap-2 overflow-hidden rounded-md transition-colors duration-300 hover:bg-accent`}
     >
       <div className={`${imageSize} relative`}>
         <Image
@@ -45,8 +47,10 @@ export function VideoCard({
         />
         <VideoCardDurationLabel duration={duration} />
       </div>
-      <div>
-        <h3 className="text-lg font-semibold text-foreground">{title}</h3>
+      <div className="flex flex-col justify-between">
+        <h3 className="line-clamp-2 text-lg font-semibold text-foreground">
+          {title}
+        </h3>
         <div className="mt-1 flex items-center justify-between text-sm text-muted-foreground">
           <div className="flex items-center space-x-1">
             <ChartLine className="h-4 w-4 text-primary" />

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 
+import { Header } from '@/components/header';
 import { ThemeProvider } from '@/components/theme-provider';
 
 import './globals.css';
@@ -47,6 +48,7 @@ export default function RootLayout({
           }}
           disableTransitionOnChange={false}
         >
+          <Header />
           {children}
         </ThemeProvider>
       </body>
