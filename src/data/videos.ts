@@ -1,6 +1,6 @@
 import { VideoDataProps } from '@/interfaces/videos';
 
-export const videos: VideoDataProps[] = [
+export const mockVideosData: VideoDataProps[] = [
   {
     id: '1',
     title: '3 Estratégias Infalíveis para Vender Qualquer Coisa',
