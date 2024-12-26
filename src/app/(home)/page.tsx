@@ -1,6 +1,5 @@
 import { Suspense } from 'react';
 
-import { Header } from '@/components/header';
 import VideoCardSkeleton from '@/components/video-card-skeleton';
 import { VideoList } from '@/components/video-list';
 
