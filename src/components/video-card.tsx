@@ -37,7 +37,6 @@ export function VideoCard({
     >
       <div className={`${imageSize} relative`}>
         <Image
-          // loader={ImageLoader}
           src={`/thumbnails/${thumbnail}`}
           priority={true}
           alt="Video thumbnail"

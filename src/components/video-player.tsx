@@ -1,4 +1,13 @@
-import { Eye, Pin, Repeat, Share2, ThumbsDown, ThumbsUp } from 'lucide-react';
+import {
+  Eye,
+  Pin,
+  Play,
+  Repeat,
+  Share2,
+  ThumbsDown,
+  ThumbsUp,
+} from 'lucide-react';
+import Image from 'next/image';
 
 import { VideoDataProps } from '@/interfaces/videos';
 
@@ -14,7 +23,20 @@ export function VideoPlayer({ videoDetails }: VideoPlayerProps) {
   return (
     <div className="">
       <div className="">
-        <div className="aspect-video bg-foreground"></div>
+        <div className="relative aspect-video bg-foreground">
+          <span className="absolute left-1/2 top-1/2 z-20 aspect-video -translate-x-1/2 -translate-y-1/2 transform rounded-2xl border-muted bg-muted px-8 py-2">
+            <Play className="h-16 w-16 text-primary" fill="#E11D48" />
+          </span>
+          <span className="before:absolute before:z-10 before:h-full before:w-full before:bg-black/40 before:content-['']" />
+          <Image
+            src={`/thumbnails/${videoDetails.thumbnail}`}
+            priority={true}
+            alt="Video Image"
+            fill={true}
+            sizes="100%"
+            className="object-cover"
+          />
+        </div>
         <div className="flex flex-wrap items-center justify-between">
           <h3 className="my-4 text-xl font-semibold text-foreground">
             {videoDetails.title}
