@@ -2,10 +2,13 @@ import { VideoDataProps } from '@/interfaces/videos';
 
 import { VideoCard } from './video-card';
 
-async function getVideos() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/videos`, {
-    cache: 'no-store',
-  });
+async function getVideos(search: string) {
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/api/videos?search=${search}`,
+    {
+      cache: 'no-store',
+    }
+  );
 
   if (!res.ok) {
     throw new Error('Failed to fetch videos');
@@ -15,13 +18,15 @@ async function getVideos() {
   return videos;
 }
 export type VideoListCardProps = {
+  search?: string;
   orientation?: 'horizontal' | 'vertical';
 };
 
 export async function VideoList({
+  search = '',
   orientation = 'vertical',
 }: VideoListCardProps) {
-  const videos = await getVideos();
+  const videos = await getVideos(search);
   const containerListStyle =
     orientation === 'vertical'
       ? 'grid grid-cols-1 gap-6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5'

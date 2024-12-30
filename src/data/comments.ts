@@ -72,7 +72,6 @@ export const mockCommentsData: CommentsResponse = {
       likes: 0,
       user: { id: 86, username: 'noram', fullName: 'Nora Mills' },
     },
-    // Adicione os outros objetos aqui seguindo o mesmo padrão...
   ],
   total: 340,
   skip: 0,
