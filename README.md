@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# TubeNext 📺
 
-## Getting Started
+<p align="center">
+  <img src="public/thumbnail-nextube-readme.webp" alt="Capa do Projeto" width="600"/>
+</p>
 
-First, run the development server:
+  <p align="center">
+  <img src="https://img.shields.io/badge/Next.js-black?logo=next.js&logoColor=white" alt="Next.js"/>
+  <img src="https://img.shields.io/badge/React-%2320232a.svg?logo=react&logoColor=%2361DAFB" alt="React"/>
+  <img src="https://img.shields.io/badge/Tailwind%20CSS-%2338B2AC.svg?logo=tailwind-css&logoColor=white" alt="TailwindCSS"/>
+  <img src="https://img.shields.io/badge/shadcn%2Fui-000?logo=shadcnui&logoColor=fff" alt="shadcn/ui"/>
+  <img src="https://img.shields.io/badge/pnpm-F69220?logo=pnpm&logoColor=fff" alt="pnpm"/>
+</p>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+**Descrição:**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+O **TubeNext** é uma plataforma de repositório de vídeos, inspirada no YouTube, desenvolvida com tecnologias modernas para fornecer uma interface para pesquisa e visualização de vídeos, assim como vídeos relacionados.
+Este projeto visa explorar as novas funcionalidades do **Next.js 15** e **React 19**, com foco em otimização de performance e implementação das mais recentes melhorias, como o **Turbopack estável**, o novo sistema de **cache**, as **APIs de requisição assíncronas**, o **componente de Form** e o suporte ao **TypeScript** no **next.config**.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Funcionalidades
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Busca de vídeos**: Permite realizar a pesquisa de vídeos em uma interface de pesquisa simples e intuitiva.
+- **Listagem de vídeos relacionados**: Após a busca, exibe vídeos sugeridos que estão relacionados ao conteúdo pesquisado.
 
-## Learn More
+## Como rodar o projeto
 
-To learn more about Next.js, take a look at the following resources:
+Para rodar o projeto localmente, siga as etapas abaixo:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Clone o repositório:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   ```bash
+   git clone https://github.com/seu-usuario/tube-next.git
+   cd tube-next
+   ```
 
-## Deploy on Vercel
+2. Instale as dependências:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```bash
+    pnpm install
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+3. Execute o servidor de desenvolvimento:
+
+   ```bash
+     pnpm dev
+   ```
+
+4. Acesse o projeto no navegador:
+
+   ```bash
+     http://localhost:3000
+   ```

@@ -1,4 +1,3 @@
-import { Search } from 'lucide-react';
 import { Suspense } from 'react';
 
 import { LogoTubeNext } from './logo-tube-next';
@@ -17,13 +16,6 @@ export function Header() {
       <Suspense>
         <SearchBar />
       </Suspense>
-      {/* <Button
-        variant={'outline'}
-        className="w-fit max-w-md justify-start rounded-full bg-muted/30 p-2.5 text-muted-foreground transition-none sm:w-full"
-      >
-        <Search size={14} />
-        <span className="hidden sm:flex">Find something ...</span>
-      </Button> */}
       <div className="flex items-center gap-6">
         <Separator orientation="vertical" className="h-9" />
         <ModeToggle />
