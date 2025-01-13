@@ -50,3 +50,11 @@ Para rodar o projeto localmente, siga as etapas abaixo:
    ```bash
      http://localhost:3000
    ```
+
+## Contato
+
+Se você tiver alguma dúvida ou sugestão, fique à vontade para entrar em contato:
+
+- GitHub: [franciscoylderlan](https://github.com/franciscoylderlan)
+- E-mail: [franciscoylderlan@gmail.com](mailto:franciscoylderlan@gmail.com)
+- LinkedIn: [Francisco Ylderlan](https://www.linkedin.com/in/franciscoylderlanoliveira/)
